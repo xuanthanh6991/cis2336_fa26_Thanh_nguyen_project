@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Room - Sugar Land Student Center</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="Thanh_Nguyen_2469918.html" class="brand">
+            <img src="images/logo.jpeg" alt="UH Student Centers logo">
+            Sugar Land Student Center
+        </a>
+
+        <nav>
+            <a href="Thanh_Nguyen_2469918.html">Home</a>
+            <div class="dropdown">
+                <button type="button" id="menu-button">Services &#9662;</button>
+                <div id="menu" class="dropdown-menu">
+                    <a href="Thanh_Nguyen_2469918.html#conference">Conference Rooms</a>
+                    <a href="Thanh_Nguyen_2469918.html#game-room">Game Room</a>
+                    <a href="Thanh_Nguyen_2469918.html#creation-station">Creation Station</a>
+                    <a href="Thanh_Nguyen_2469918.html#food-court">Food Court</a>
+                </div>
+            </div>
+            <a href="faq.html">FAQ</a>
+            <a href="booking.html">Book a Room</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Book a Room</h1>
+        <p>Fill out the form to request a room. All fields are required.</p>
+
+        <form id="booking-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" minlength="2" autocomplete="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@uh.edu" autocomplete="email" required>
+
+            <label for="room">Room</label>
+            <select id="room" name="room" required>
+                <option value="">-- Choose a room --</option>
+                <option value="Ballroom">Ballroom (up to 400 people)</option>
+                <option value="Theater">Theater (up to 100 people)</option>
+                <option value="Meeting Room A">Meeting Room A (up to 20 people)</option>
+                <option value="Meeting Room B">Meeting Room B (up to 20 people)</option>
+                <option value="Group Study Room">Group Study Room (up to 8 people)</option>
+            </select>
+            <p id="room-status" role="status"></p>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="start">Start Time</label>
+            <input type="time" id="start" name="start" required>
+
+            <label for="end">End Time</label>
+            <input type="time" id="end" name="end" required>
+
+            <label for="people">Number of People</label>
+            <input type="number" id="people" name="people" min="1" max="400" required>
+
+            <button type="submit" class="button">Request Booking</button>
+            <p id="message" role="status"></p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sugar Land Student Center. Photos from the University of Houston (uh.edu).</p>
+    </footer>
+
+    <script src="js/nav.js"></script>
+    <script src="js/booking.js"></script>
+</body>
+</html>
