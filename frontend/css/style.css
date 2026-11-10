@@ -1,0 +1,279 @@
+/* ---------- General ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: white;
+    color: #222;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+h2 {
+    color: #c8102e;
+}
+
+main a {
+    color: #c8102e;
+}
+
+/* ---------- Header and navigation menu ---------- */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #c8102e;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.brand img {
+    width: 50px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+}
+
+nav a,
+nav button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav a:hover,
+nav button:hover {
+    background-color: white;
+    color: #c8102e;
+}
+
+/* The Services menu is hidden until js/nav.js adds the "show" class */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    color: #222;
+}
+
+.dropdown-menu a:hover {
+    background-color: #c8102e;
+    color: white;
+}
+
+/* ---------- Buttons ---------- */
+.button {
+    display: inline-block;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    background-color: #c8102e;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #8a0b20;
+}
+
+/* ---------- Home page ---------- */
+.hero {
+    padding: 80px 20px;
+    border-radius: 6px;
+    /* The dark layer on top of the photo makes the white text easy to read */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../images/banner.jpg") center / cover;
+    color: white;
+    text-align: center;
+}
+
+.service {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 25px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.service img {
+    width: 40%;
+}
+
+.service div {
+    flex: 1;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.gallery figure {
+    flex: 1;
+    min-width: 200px;
+    margin: 0;
+    text-align: center;
+}
+
+/* Pictures grow a little when the mouse is over them */
+.service img,
+.gallery img {
+    transition: transform 0.3s;
+}
+
+.service img:hover,
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact address {
+    flex: 1;
+    min-width: 200px;
+    font-style: normal;
+}
+
+/* ---------- FAQ page ---------- */
+details {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+summary {
+    padding: 12px 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+summary:hover {
+    background-color: #f2f2f2;
+}
+
+details[open] summary {
+    background-color: #c8102e;
+    color: white;
+}
+
+details p {
+    margin: 0;
+    padding: 12px 15px;
+}
+
+/* ---------- Booking page ---------- */
+form {
+    max-width: 500px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #c8102e;
+}
+
+form .button {
+    margin-top: 20px;
+}
+
+.error {
+    color: #b00020;
+    font-weight: bold;
+}
+
+.success {
+    color: #1b7a2f;
+    font-weight: bold;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    padding: 5px 20px;
+    background-color: #c8102e;
+    color: white;
+    text-align: center;
+}
+
+/* ---------- Small screens (phones) ---------- */
+@media (max-width: 600px) {
+    .service {
+        flex-direction: column;
+    }
+
+    .service img {
+        width: 100%;
+    }
+}
